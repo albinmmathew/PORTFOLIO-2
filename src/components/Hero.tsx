@@ -4,6 +4,17 @@ import React, { useRef } from 'react';
 
 const Hero: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
+  const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    setMousePos({
+      x: (clientX / innerWidth - 0.5) * 20,
+      y: (clientY / innerHeight - 0.5) * 20
+    });
+  };
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"]
@@ -15,15 +26,22 @@ const Hero: React.FC = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden min-h-[100svh] flex items-center justify-center pt-24 md:pt-28 mesh-bg" id="home">
+    <section 
+      ref={ref} 
+      onMouseMove={handleMouseMove}
+      className="relative overflow-hidden min-h-[100svh] flex items-center justify-center pt-24 md:pt-28 mesh-bg" 
+      id="home"
+    >
       {/* Dynamic Background Elements */}
       <motion.div
+        animate={{ x: mousePos.x, y: mousePos.y }}
         style={{ y: y1, rotate }}
-        className="absolute top-[5%] left-[10%] w-64 h-64 bg-blue-300/20 blur-[80px] rounded-full mix-blend-multiply"
+        className="absolute top-[5%] left-[10%] w-64 h-64 bg-blue-300/20 blur-[80px] rounded-full mix-blend-multiply transition-transform duration-300 ease-out"
       />
       <motion.div
+        animate={{ x: -mousePos.x, y: -mousePos.y }}
         style={{ y: y2, rotate: -rotate }}
-        className="absolute bottom-[10%] right-[15%] w-96 h-96 bg-indigo-300/20 blur-[100px] rounded-full mix-blend-multiply"
+        className="absolute bottom-[10%] right-[15%] w-96 h-96 bg-indigo-300/20 blur-[100px] rounded-full mix-blend-multiply transition-transform duration-300 ease-out"
       />
       <motion.div
         animate={{

@@ -3,8 +3,18 @@ import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-white to-[#eef2ff]" id="about">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-white to-[#eef2ff] relative overflow-hidden" id="about">
+      {/* Decorative Blobs */}
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.1, 0.2, 0.1] 
+        }}
+        transition={{ duration: 10, repeat: Infinity }}
+        className="absolute -top-20 -right-20 w-96 h-96 bg-blue-400/20 blur-[100px] rounded-full pointer-events-none"
+      />
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
           {/* Left Column: Heading */}

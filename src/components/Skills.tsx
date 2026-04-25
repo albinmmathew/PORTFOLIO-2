@@ -32,6 +32,25 @@ const Skills: React.FC = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+    }
+  };
+
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff]" id="skills">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -51,15 +70,22 @@ const Skills: React.FC = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {skillCategories.map((category, i) => (
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+        >
+          {skillCategories.map((category) => (
             <motion.div
               key={category.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white/75 backdrop-blur-xl border border-white p-7 md:p-8 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl shadow-blue-100/50 hover:-translate-y-2 transition-all duration-500 group h-full"
+              variants={itemVariants}
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: "0 20px 40px -15px rgba(59, 130, 246, 0.2)"
+              }}
+              className="bg-white/75 backdrop-blur-xl border border-white p-7 md:p-8 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl shadow-blue-100/50 transition-all duration-500 group h-full cursor-pointer"
             >
               <div className="flex items-center gap-4 md:gap-6 mb-8 md:mb-10">
                 <div className="text-blue-600 p-4 md:p-5 bg-blue-50 rounded-2xl md:rounded-3xl group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-blue-100/20">
@@ -79,7 +105,7 @@ const Skills: React.FC = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

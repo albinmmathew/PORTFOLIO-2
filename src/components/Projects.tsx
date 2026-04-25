@@ -40,8 +40,14 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff]" id="projects">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff] relative overflow-hidden" id="projects">
+      {/* Background Accent */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[120%] bg-blue-400/10 blur-[120px] rotate-12 animate-pulse"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[120%] bg-indigo-400/10 blur-[120px] -rotate-12 animate-pulse"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +81,7 @@ const Projects: React.FC = () => {
             >
               <div className="absolute inset-0 bg-blue-400/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
 
-              <div className="bg-white/75 backdrop-blur-3xl border border-white p-7 md:p-8 lg:p-10 rounded-[3rem] md:rounded-[4rem] shadow-2xl shadow-blue-100/30 hover:shadow-blue-200/50 transition-all duration-700 flex flex-col w-full hover:-translate-y-4">
+              <div className="bg-white/75 backdrop-blur-3xl border border-white p-7 md:p-8 lg:p-10 rounded-[3rem] md:rounded-[4rem] shadow-2xl shadow-blue-100/30 hover:shadow-blue-200/50 transition-all duration-700 flex flex-col w-full hover:-translate-y-4 hover:scale-[1.02] light-sweep">
 
                 <div className="flex justify-between items-start mb-6 md:mb-10">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-600 text-white rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center shadow-2xl shadow-blue-200 group-hover:rotate-[15deg] transition-transform duration-500">
