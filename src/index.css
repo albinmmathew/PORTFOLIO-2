@@ -1,40 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;800&display=swap');
 
 @import "tailwindcss";
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #09090b;
-    color: #d4d4d8;
+    background-color: #eef2ff;
+    color: #1e3a8a;
   }
-  
+
   body {
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    background-color: #eef2ff;
+    overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    color: #f4f4f5;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #1e3a8a;
+    letter-spacing: -0.05em;
   }
 }
 
-/* Custom scrollbar for a clean academic look */
+@layer utilities {
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-2xl border border-white/50 shadow-2xl shadow-blue-200/30;
+  }
+
+  .glass-card-hover {
+    @apply hover:bg-white/60 hover:border-white hover:shadow-blue-300/40 transition-all duration-500;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+  }
+
+  .mesh-bg {
+    background-image:
+      radial-gradient(at 0% 0%, hsla(225, 100%, 95%, 1) 0, transparent 50%),
+      radial-gradient(at 50% 0%, hsla(220, 100%, 92%, 1) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(215, 100%, 95%, 1) 0, transparent 50%);
+  }
+
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+/* Custom scrollbar for Soft-Aero */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #09090b; 
+  background: #f8fafc;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #27272a; 
-  border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 20px;
+  border: 3px solid #f8fafc;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46; 
+  background: #94a3b8;
 }
-
-

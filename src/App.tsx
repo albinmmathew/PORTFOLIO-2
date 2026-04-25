@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,19 +8,21 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-zinc-950 font-sans text-zinc-300 antialiased relative selection:bg-zinc-800 selection:text-zinc-100">
+    <div className="min-h-screen bg-[#eef2ff] font-sans text-[#1e3a8a] antialiased relative selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Education />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Education />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
