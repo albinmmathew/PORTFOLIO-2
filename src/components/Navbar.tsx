@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`fixed w-full z-[100] transition-all duration-700 ${scrolled ? 'py-4' : 'py-8'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className={`flex justify-between items-center px-8 py-4 rounded-[2rem] transition-all duration-700 ${scrolled ? 'bg-white/40 backdrop-blur-3xl border border-white/50 shadow-2xl shadow-blue-100/30' : 'bg-transparent'}`}>
+        <div className={`flex justify-between items-center px-8 py-4 rounded-[2rem] transition-all duration-700 ${scrolled ? 'bg-white/75 backdrop-blur-3xl border border-white/50 shadow-2xl shadow-blue-100/30' : 'bg-transparent'}`}>
 
           {/* Logo */}
           <motion.a

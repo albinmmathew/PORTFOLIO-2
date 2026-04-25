@@ -4,16 +4,16 @@ import { GraduationCap, MapPin } from 'lucide-react';
 
 const Education: React.FC = () => {
   return (
-    <section className="py-24 md:py-32 bg-[#eef2ff]" id="education">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff]" id="education">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-16"
+          className="mb-10"
         >
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-4">
             <span className="w-12 h-[3px] bg-blue-500 rounded-full"></span>
             <span className="text-blue-500 font-black tracking-widest text-sm uppercase">Academic Foundation</span>
           </div>
@@ -28,7 +28,7 @@ const Education: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="bg-white/60 backdrop-blur-xl border border-white p-8 md:p-14 rounded-[3rem] md:rounded-[3.5rem] shadow-2xl shadow-blue-100/50"
+            className="bg-white/75 backdrop-blur-xl border border-white p-7 md:p-10 rounded-[3rem] md:rounded-[3.5rem] shadow-2xl shadow-blue-100/50"
           >
             <div className="flex items-center gap-4 mb-10 md:mb-14">
               <div className="p-4 bg-blue-600 text-white rounded-2xl md:rounded-3xl shadow-lg shadow-blue-100">

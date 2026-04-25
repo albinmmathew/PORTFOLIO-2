@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-white/80 to-[#eef2ff]" id="about">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-white to-[#eef2ff]" id="about">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
@@ -39,7 +39,7 @@ const About: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white/60 backdrop-blur-xl border border-white p-7 md:p-8 rounded-[2.5rem] md:rounded-[3.5rem] space-y-4 md:space-y-5 text-indigo-900/70 text-base md:text-xl leading-relaxed shadow-2xl shadow-blue-100/50"
+              className="bg-white/75 backdrop-blur-xl border border-white p-7 md:p-8 rounded-[2.5rem] md:rounded-[3.5rem] space-y-4 md:space-y-5 text-indigo-900/70 text-base md:text-xl leading-relaxed shadow-2xl shadow-blue-100/50"
             >
               <h3 className="text-2xl md:text-3xl font-black text-indigo-900 uppercase tracking-tighter leading-tight">
                 Mathematics Graduate turned <br />

@@ -40,16 +40,16 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 md:py-40 bg-[#eef2ff]" id="projects">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff]" id="projects">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8"
+          className="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8"
         >
           <div className="max-w-2xl">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-[4px] bg-blue-600 rounded-full"></div>
               <span className="text-blue-600 font-black tracking-[0.4em] text-xs uppercase">Portfolio Gallery</span>
             </div>
@@ -75,9 +75,9 @@ const Projects: React.FC = () => {
             >
               <div className="absolute inset-0 bg-blue-400/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
 
-              <div className="bg-white/40 backdrop-blur-3xl border border-white p-8 md:p-10 lg:p-12 rounded-[3rem] md:rounded-[4rem] shadow-2xl shadow-blue-100/30 hover:shadow-blue-200/50 transition-all duration-700 flex flex-col w-full hover:-translate-y-4">
+              <div className="bg-white/75 backdrop-blur-3xl border border-white p-7 md:p-8 lg:p-10 rounded-[3rem] md:rounded-[4rem] shadow-2xl shadow-blue-100/30 hover:shadow-blue-200/50 transition-all duration-700 flex flex-col w-full hover:-translate-y-4">
 
-                <div className="flex justify-between items-start mb-8 md:mb-12">
+                <div className="flex justify-between items-start mb-6 md:mb-10">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-600 text-white rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center shadow-2xl shadow-blue-200 group-hover:rotate-[15deg] transition-transform duration-500">
                     <Box size={28} strokeWidth={2.5} />
                   </div>
@@ -86,7 +86,7 @@ const Projects: React.FC = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-blue-50 text-blue-600 rounded-xl md:rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                      className="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center bg-blue-50 text-blue-600 rounded-xl md:rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-sm"
                     >
                       <Github size={18} strokeWidth={2.5} />
                     </a>
@@ -95,7 +95,7 @@ const Projects: React.FC = () => {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-blue-50 text-blue-600 rounded-xl md:rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                        className="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center bg-blue-50 text-blue-600 rounded-xl md:rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-sm"
                       >
                         <ExternalLink size={18} strokeWidth={2.5} />
                       </a>
@@ -103,14 +103,14 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mb-8">
+                <div className="mb-6">
                   <p className="text-blue-500 text-[10px] font-black uppercase tracking-[0.3em] mb-2">{project.category}</p>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-indigo-950 tracking-tighter uppercase leading-none group-hover:text-blue-600 transition-colors break-words">
                     {project.title}
                   </h3>
                 </div>
 
-                <p className="text-indigo-900/60 font-bold text-sm md:text-base leading-relaxed mb-10 flex-grow uppercase tracking-tight">
+                <p className="text-indigo-900/60 font-bold text-sm md:text-base leading-relaxed mb-8 flex-grow uppercase tracking-tight">
                   {project.description}
                 </p>
 

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="py-12 bg-[#eef2ff] border-t border-white">
+    <footer className="py-8 bg-gradient-to-b from-[#eef2ff] to-white border-t border-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <div className="flex flex-col items-center gap-10">
 
@@ -32,10 +32,7 @@ const Footer: React.FC = () => {
             ))}
           </div>
 
-          <div className="space-y-3">
-            <p className="text-[10px] md:text-sm font-black uppercase tracking-[0.4em] text-indigo-900/40 flex items-center justify-center gap-2">
-              Made with <Heart size={14} className="text-red-400 fill-red-400" /> in Kerala
-            </p>
+          <div className="space-y-2">
             <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-indigo-900/30">
               &copy; {new Date().getFullYear()} Albin Mathew. All rights reserved.
             </p>

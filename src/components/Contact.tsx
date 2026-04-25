@@ -4,16 +4,16 @@ import { Mail, Github, Linkedin, MapPin, Send, MessageSquare } from 'lucide-reac
 
 const Contact: React.FC = () => {
   return (
-    <section className="py-24 md:py-32 bg-[#eef2ff]" id="contact">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff]" id="contact">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12 md:mb-16"
+          className="mb-10"
         >
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-4">
             <span className="w-12 h-[3px] bg-blue-500 rounded-full"></span>
             <span className="text-blue-500 font-black tracking-widest text-sm uppercase">Get In Touch</span>
           </div>
@@ -30,9 +30,9 @@ const Contact: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/60 backdrop-blur-xl border border-white p-6 md:p-8 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl shadow-blue-100/50 space-y-8"
+              className="bg-white/75 backdrop-blur-xl border border-white p-6 md:p-7 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl shadow-blue-100/50 space-y-6"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-2">
                 <div className="p-3 bg-blue-50 text-blue-600 rounded-2xl">
                   <MessageSquare size={24} />
                 </div>
@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 bg-white/60 backdrop-blur-xl border border-white p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl shadow-blue-100/50"
+            className="lg:col-span-7 bg-white/75 backdrop-blur-xl border border-white p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl shadow-blue-100/50"
           >
             <form className="space-y-6 md:space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
