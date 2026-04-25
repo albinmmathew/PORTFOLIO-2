@@ -9,34 +9,34 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="py-20 bg-[#eef2ff] border-t border-white">
+    <footer className="py-12 bg-[#eef2ff] border-t border-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-        <div className="flex flex-col items-center gap-12">
+        <div className="flex flex-col items-center gap-10">
 
           <div className="flex flex-col items-center">
-            <div className="text-3xl font-black uppercase tracking-tighter text-indigo-900 mb-2">
-              ALBIN <span className="text-blue-500">MATHEW</span>
+            <div className="text-3xl font-black uppercase tracking-tighter text-indigo-900 mb-1">
+              AM
             </div>
-            <div className="w-12 h-1 bg-blue-500 rounded-full"></div>
+            <div className="w-8 h-1 bg-blue-500 rounded-full"></div>
           </div>
 
-          <div className="flex gap-10">
+          <div className="flex gap-6 md:gap-8">
             {socials.map((social, i) => (
               <a
                 key={i}
                 href={social.href}
-                className="w-14 h-14 bg-white border border-white rounded-2xl flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white transition-all duration-500 hover:-translate-y-2 shadow-xl shadow-blue-100/50"
+                className="w-12 h-12 md:w-14 md:h-14 bg-white border border-white rounded-2xl flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white transition-all duration-500 hover:-translate-y-2 shadow-xl shadow-blue-100/50"
               >
                 {social.icon}
               </a>
             ))}
           </div>
 
-          <div className="space-y-4">
-            <p className="text-sm font-black uppercase tracking-[0.4em] text-indigo-900/40 flex items-center justify-center gap-2">
+          <div className="space-y-3">
+            <p className="text-[10px] md:text-sm font-black uppercase tracking-[0.4em] text-indigo-900/40 flex items-center justify-center gap-2">
               Made with <Heart size={14} className="text-red-400 fill-red-400" /> in Kerala
             </p>
-            <p className="text-xs font-bold uppercase tracking-widest text-indigo-900/30">
+            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-indigo-900/30">
               &copy; {new Date().getFullYear()} Albin Mathew. All rights reserved.
             </p>
           </div>

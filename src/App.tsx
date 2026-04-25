@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#eef2ff] font-sans text-[#1e3a8a] antialiased relative selection:bg-blue-100 selection:text-blue-900">
+    <div className="min-h-screen bg-[#eef2ff] font-sans text-[#1e1b4b] antialiased relative selection:bg-blue-600 selection:text-white">
       <Navbar />
       <main>
         <Hero />

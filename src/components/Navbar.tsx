@@ -34,10 +34,9 @@ const Navbar: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-2 text-2xl font-black uppercase tracking-tighter text-indigo-950 group"
           >
-            <div className="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:rotate-[15deg] transition-transform">
-              <span className="text-xl">A</span>
+            <div className="w-14 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:rotate-[15deg] transition-transform">
+              <span className="text-xl tracking-tighter">AM</span>
             </div>
-            <span className="hidden sm:block group-hover:text-blue-500 transition-colors">MATHEW</span>
           </motion.a>
 
           {/* Desktop Menu */}
@@ -54,6 +53,7 @@ const Navbar: React.FC = () => {
                 {link.name}
               </motion.a>
             ))}
+            
             <motion.a
               href="#contact"
               initial={{ opacity: 0, scale: 0.9 }}
