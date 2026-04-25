@@ -17,7 +17,7 @@ const Education: React.FC = () => {
             <span className="w-12 h-[3px] bg-blue-500 rounded-full"></span>
             <span className="text-blue-500 font-black tracking-widest text-sm uppercase">Academic Foundation</span>
           </div>
-          <h2 className="text-5xl lg:text-7xl font-sans font-black leading-tight text-indigo-900 tracking-tighter uppercase break-words">
+          <h2 className="text-4xl lg:text-7xl font-sans font-black leading-tight text-indigo-900 tracking-tighter uppercase break-words">
             EDUCATION <span className="text-blue-500">&</span> GROWTH
           </h2>
         </motion.div>

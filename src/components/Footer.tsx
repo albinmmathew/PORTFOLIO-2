@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
 
           <div className="space-y-2">
             <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-indigo-900/30">
-              &copy; {new Date().getFullYear()} Albin Mathew. All rights reserved.
+              &copy; {new Date().getFullYear()} Albin Mammen Mathew. All rights reserved.
             </p>
           </div>
 

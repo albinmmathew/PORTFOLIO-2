@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
               <div className="w-12 h-[4px] bg-blue-600 rounded-full"></div>
               <span className="text-blue-600 font-black tracking-[0.4em] text-xs uppercase">Portfolio Gallery</span>
             </div>
-            <h2 className="text-5xl md:text-8xl font-sans font-black leading-[0.85] text-indigo-950 tracking-tighter uppercase">
+            <h2 className="text-4xl md:text-8xl font-sans font-black leading-[0.85] text-indigo-950 tracking-tighter uppercase">
               SELECTED <br />
               <span className="text-blue-500">PROTOTYPES</span>
             </h2>

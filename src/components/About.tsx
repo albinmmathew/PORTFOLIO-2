@@ -19,7 +19,7 @@ const About: React.FC = () => {
               <span className="w-12 h-[3px] bg-blue-500 rounded-full"></span>
               <span className="text-blue-500 font-black tracking-widest text-sm uppercase">Background & Vision</span>
             </div>
-            <h2 className="text-5xl sm:text-6xl lg:text-8xl font-sans font-black leading-[0.9] text-indigo-900 tracking-tighter uppercase mb-6 break-words">
+            <h2 className="text-4xl sm:text-6xl lg:text-8xl font-sans font-black leading-[0.9] text-indigo-900 tracking-tighter uppercase mb-6 break-words">
               THE <span className="text-blue-500">ANALYTICAL</span> MIND
             </h2>
             <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl shadow-blue-100 border border-white">
@@ -41,7 +41,7 @@ const About: React.FC = () => {
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="bg-white/75 backdrop-blur-xl border border-white p-7 md:p-8 rounded-[2.5rem] md:rounded-[3.5rem] space-y-4 md:space-y-5 text-indigo-900/70 text-base md:text-xl leading-relaxed shadow-2xl shadow-blue-100/50"
             >
-              <h3 className="text-2xl md:text-3xl font-black text-indigo-900 uppercase tracking-tighter leading-tight">
+              <h3 className="text-xl md:text-3xl font-black text-indigo-900 uppercase tracking-tighter leading-tight">
                 Mathematics Graduate turned <br />
                 <span className="text-blue-600">Software Engineer.</span>
               </h3>
