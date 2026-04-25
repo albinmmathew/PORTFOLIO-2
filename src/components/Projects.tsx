@@ -81,26 +81,24 @@ const Projects: React.FC = () => {
             >
               <div className="absolute inset-0 bg-blue-400/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
 
-              <div className="bg-white/75 backdrop-blur-3xl border border-white p-7 md:p-8 lg:p-10 rounded-[3rem] md:rounded-[4rem] shadow-2xl shadow-blue-100/30 hover:shadow-blue-200/50 transition-all duration-700 flex flex-col w-full hover:-translate-y-4 hover:scale-[1.02] light-sweep">
-
+              <div 
+                onClick={() => window.open(project.github, '_blank')}
+                className="bg-white/75 backdrop-blur-3xl border border-white p-7 md:p-8 lg:p-10 rounded-[3rem] md:rounded-[4rem] shadow-2xl shadow-blue-100/30 hover:shadow-blue-200/50 transition-all duration-700 flex flex-col w-full hover:-translate-y-4 hover:scale-[1.02] light-sweep cursor-pointer"
+              >
                 <div className="flex justify-between items-start mb-6 md:mb-10">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-600 text-white rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center shadow-2xl shadow-blue-200 group-hover:rotate-[15deg] transition-transform duration-500">
                     <Box size={28} strokeWidth={2.5} />
                   </div>
                   <div className="flex gap-2">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center bg-blue-50 text-blue-600 rounded-xl md:rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-sm"
-                    >
+                    <div className="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center bg-blue-50 text-blue-600 rounded-xl md:rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-sm">
                       <Github size={18} strokeWidth={2.5} />
-                    </a>
+                    </div>
                     {project.demo && (
                       <a
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center bg-blue-50 text-blue-600 rounded-xl md:rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-sm"
                       >
                         <ExternalLink size={18} strokeWidth={2.5} />
@@ -129,7 +127,7 @@ const Projects: React.FC = () => {
                 </div>
 
                 <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 hidden sm:block">
-                  <ArrowUpRight className="text-blue-600" size={28} md:size={32} />
+                  <ArrowUpRight className="text-blue-600 w-7 h-7 md:w-8 md:h-8" />
                 </div>
               </div>
             </motion.div>

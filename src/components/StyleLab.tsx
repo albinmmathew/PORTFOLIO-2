@@ -2,11 +2,27 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Music, Cpu, Zap, Eye, Layout, Palette } from 'lucide-react';
 
-const themes = {
+interface Theme {
+  name: string;
+  bg: string;
+  text: string;
+  secondary?: string;
+  accent: string;
+  accentBg: string;
+  border: string;
+  card: string;
+  font: string;
+  heading: string;
+  description: string;
+  vibe: string;
+}
+
+const themes: Record<string, Theme> = {
   harmonic: {
     name: 'Harmonic Tech',
     bg: 'bg-zinc-950',
     text: 'text-zinc-100',
+    secondary: 'text-zinc-400',
     accent: 'text-cyan-400',
     accentBg: 'bg-cyan-400',
     border: 'border-zinc-800',
@@ -20,6 +36,7 @@ const themes = {
     name: 'Sonic Minimalist',
     bg: 'bg-white',
     text: 'text-zinc-900',
+    secondary: 'text-zinc-500',
     accent: 'text-sky-500',
     accentBg: 'bg-sky-500',
     border: 'border-zinc-200',
@@ -33,6 +50,7 @@ const themes = {
     name: 'Ambient Flux',
     bg: 'bg-indigo-950',
     text: 'text-blue-50',
+    secondary: 'text-blue-200',
     accent: 'text-cyan-400',
     accentBg: 'bg-cyan-400',
     border: 'border-indigo-800',
@@ -46,6 +64,7 @@ const themes = {
     name: 'Mono Modulator',
     bg: 'bg-black',
     text: 'text-white',
+    secondary: 'text-zinc-500',
     accent: 'text-red-600',
     accentBg: 'bg-red-600',
     border: 'border-white/20',
@@ -59,6 +78,7 @@ const themes = {
     name: 'Solarized Gold',
     bg: 'bg-stone-950',
     text: 'text-stone-100',
+    secondary: 'text-stone-400',
     accent: 'text-amber-500',
     accentBg: 'bg-amber-500',
     border: 'border-stone-800',
@@ -72,6 +92,7 @@ const themes = {
     name: 'Vapor Circuit',
     bg: 'bg-zinc-900',
     text: 'text-emerald-400',
+    secondary: 'text-emerald-600',
     accent: 'text-emerald-500',
     accentBg: 'bg-emerald-500',
     border: 'border-emerald-900/50',
@@ -85,6 +106,7 @@ const themes = {
     name: 'Blueprint Sync',
     bg: 'bg-blue-900',
     text: 'text-blue-50',
+    secondary: 'text-blue-300',
     accent: 'text-white',
     accentBg: 'bg-white',
     border: 'border-blue-700',
@@ -98,6 +120,7 @@ const themes = {
     name: 'Sandstone Serif',
     bg: 'bg-[#f5f2ed]',
     text: 'text-[#4a3f35]',
+    secondary: 'text-[#8b7e74]',
     accent: 'text-[#bc6c25]',
     accentBg: 'bg-[#bc6c25]',
     border: 'border-[#e0dcd0]',
@@ -111,6 +134,7 @@ const themes = {
     name: 'Sky Logic',
     bg: 'bg-[#eef2ff]',
     text: 'text-[#1e3a8a]',
+    secondary: 'text-[#1e3a8a]/70',
     accent: 'text-[#3b82f6]',
     accentBg: 'bg-[#3b82f6]',
     border: 'border-white',
@@ -124,6 +148,7 @@ const themes = {
     name: 'Mint Technical',
     bg: 'bg-[#f0fdf4]',
     text: 'text-[#064e3b]',
+    secondary: 'text-[#065f46]',
     accent: 'text-[#10b981]',
     accentBg: 'bg-[#10b981]',
     border: 'border-[#dcfce7]',

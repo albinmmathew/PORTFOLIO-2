@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
                 download
                 className="group w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 bg-blue-600 text-white hover:bg-blue-700 font-black text-xs md:text-base uppercase tracking-widest transition-all rounded-xl md:rounded-2xl shadow-2xl shadow-blue-500/20 flex items-center justify-center gap-3 hover:-translate-y-1 active:scale-95"
               >
-                <Download size={18} md:size={22} strokeWidth={3} />
+                <Download className="w-5 h-5 md:w-6 md:h-6" strokeWidth={3} />
                 Get Resume
               </a>
               <a 
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
                 className="group w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 bg-white text-indigo-950 border-2 border-white hover:shadow-xl transition-all rounded-xl md:rounded-2xl font-black text-xs md:text-base uppercase tracking-widest flex items-center justify-center gap-3 shadow-lg hover:-translate-y-1"
               >
                 View Works
-                <MousePointer2 size={16} md:size={20} className="group-hover:rotate-12 transition-transform" />
+                <MousePointer2 className="w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform" />
               </a>
             </div>
           </motion.div>
