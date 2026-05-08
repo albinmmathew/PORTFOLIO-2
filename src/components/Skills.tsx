@@ -52,20 +52,20 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff]" id="skills">
+    <section className="py-24 md:py-40 bg-gradient-to-b from-white to-[#eef2ff]" id="skills">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-10 md:mb-12"
+          className="mb-16 md:mb-20"
         >
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-6">
             <span className="w-12 h-[3px] bg-blue-500 rounded-full"></span>
             <span className="text-blue-500 font-black tracking-widest text-sm uppercase">Technical Arsenal</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl lg:text-7xl font-sans font-black leading-tight text-indigo-900 tracking-tighter uppercase break-words">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-sans font-black leading-tight text-indigo-900 tracking-tighter uppercase break-words">
             SKILL <span className="text-blue-500">MAPPING</span>
           </h2>
         </motion.div>

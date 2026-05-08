@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff] relative overflow-hidden" id="projects">
+    <section className="py-24 md:py-40 bg-gradient-to-b from-white to-[#eef2ff] relative overflow-hidden" id="projects">
       {/* Background Accent */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[120%] bg-blue-400/10 blur-[120px] rotate-12 animate-pulse"></div>
@@ -52,14 +52,14 @@ const Projects: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8"
+          className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8"
         >
           <div className="max-w-2xl">
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-[4px] bg-blue-600 rounded-full"></div>
               <span className="text-blue-600 font-black tracking-[0.4em] text-xs uppercase">Portfolio Gallery</span>
             </div>
-            <h2 className="text-4xl md:text-8xl font-sans font-black leading-[0.85] text-indigo-950 tracking-tighter uppercase">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-sans font-black leading-[0.85] text-indigo-950 tracking-tighter uppercase">
               SELECTED <br />
               <span className="text-blue-500">PROTOTYPES</span>
             </h2>

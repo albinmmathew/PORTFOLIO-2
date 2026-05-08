@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
     <section 
       ref={ref} 
       onMouseMove={handleMouseMove}
-      className="relative overflow-hidden min-h-[100svh] flex items-center justify-center pt-24 md:pt-28 mesh-bg" 
+      className="relative overflow-hidden min-h-[100svh] flex items-center justify-center pt-32 md:pt-40 pb-20 mesh-bg" 
       id="home"
     >
       {/* Dynamic Background Elements */}
@@ -52,13 +52,13 @@ const Hero: React.FC = () => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] bg-white/40 blur-[120px] rounded-full z-0"
       />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 z-10 relative text-center pb-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 z-10 relative text-center pb-20">
         <motion.div style={{ opacity }}>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-3 px-6 py-2 bg-white border border-white rounded-full mb-6 shadow-xl shadow-blue-100/50"
+            className="inline-flex items-center gap-3 px-6 py-2 bg-white border border-white rounded-full mb-8 shadow-xl shadow-blue-100/50"
           >
             <Sparkles className="text-blue-500 animate-pulse" size={16} />
             <span className="text-blue-600 text-[10px] md:text-xs font-black uppercase tracking-[0.4em]">
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-indigo-950 font-sans text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[7.5rem] font-black leading-[0.85] tracking-tighter mb-4 md:mb-6 break-words"
+            className="text-indigo-950 font-sans text-[10vw] sm:text-[9vw] md:text-[7vw] lg:text-[6.5rem] font-black leading-[0.9] tracking-tighter mb-6 md:mb-8 break-words"
           >
             ALBIN <br />
             <span className="text-blue-500 text-glow">MAMMEN</span> <br />

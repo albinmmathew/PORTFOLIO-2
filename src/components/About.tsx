@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-white to-[#eef2ff] relative overflow-hidden" id="about">
+    <section className="py-24 md:py-40 bg-gradient-to-b from-white to-[#eef2ff] relative overflow-hidden" id="about">
       {/* Decorative Blobs */}
       <motion.div 
         animate={{ 
@@ -15,7 +15,7 @@ const About: React.FC = () => {
       />
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
 
           {/* Left Column: Heading */}
           <motion.div
@@ -25,11 +25,11 @@ const About: React.FC = () => {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5"
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-6">
               <span className="w-12 h-[3px] bg-blue-500 rounded-full"></span>
               <span className="text-blue-500 font-black tracking-widest text-sm uppercase">Background & Vision</span>
             </div>
-            <h2 className="text-4xl sm:text-6xl lg:text-8xl font-sans font-black leading-[0.9] text-indigo-900 tracking-tighter uppercase mb-6 break-words">
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-sans font-black leading-[0.9] text-indigo-900 tracking-tighter uppercase mb-8 break-words">
               THE <span className="text-blue-500">ANALYTICAL</span> MIND
             </h2>
             <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl shadow-blue-100 border border-white">

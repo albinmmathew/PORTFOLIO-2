@@ -32,7 +32,7 @@ const Education: React.FC = () => {
           >
             <div className="flex items-center gap-4 mb-10 md:mb-14">
               <div className="p-4 bg-blue-600 text-white rounded-2xl md:rounded-3xl shadow-lg shadow-blue-100">
-                <GraduationCap size={28} md:size={32} strokeWidth={2.5} />
+                <GraduationCap className="w-7 h-7 md:w-8 md:h-8" strokeWidth={2.5} />
               </div>
               <h3 className="text-2xl md:text-3xl font-black text-indigo-900 uppercase tracking-tighter">Academic Path</h3>
             </div>
@@ -49,7 +49,7 @@ const Education: React.FC = () => {
                   <span className="px-4 py-1 bg-blue-600 text-white text-[10px] md:text-xs font-black uppercase tracking-widest rounded-full w-fit whitespace-nowrap">2024 — 2026</span>
                 </div>
                 <div className="flex items-center gap-2 text-blue-500 mb-4">
-                  <MapPin size={14} md:size={16} />
+                  <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4" />
                   <p className="font-bold uppercase tracking-wide text-[10px] md:text-sm">Rajagiri College of Social Sciences</p>
                 </div>
                 <p className="text-indigo-900/60 font-medium leading-relaxed text-sm md:text-base max-w-2xl">
@@ -66,7 +66,7 @@ const Education: React.FC = () => {
                   <span className="px-4 py-1 bg-blue-100 text-blue-600 text-[10px] md:text-xs font-black uppercase tracking-widest rounded-full w-fit whitespace-nowrap">2021 — 2024</span>
                 </div>
                 <div className="flex items-center gap-2 text-blue-500 mb-4">
-                  <MapPin size={14} md:size={16} />
+                  <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4" />
                   <p className="font-bold uppercase tracking-wide text-[10px] md:text-sm">St. Berchmans College, Changanassery</p>
                 </div>
                 <p className="text-indigo-900/60 font-medium leading-relaxed text-sm md:text-base max-w-2xl">

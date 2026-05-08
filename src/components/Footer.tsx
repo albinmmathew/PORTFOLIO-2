@@ -3,37 +3,40 @@ import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const socials = [
-    { icon: <Github size={22} />, href: 'https://github.com/albinmmathew' },
-    { icon: <Linkedin size={22} />, href: 'https://www.linkedin.com/in/albinmmathew/' },
-    { icon: <Mail size={22} />, href: 'mailto:albinmathew@gmail.com' },
+    { Icon: Github, href: 'https://github.com/albinmmathew' },
+    { Icon: Linkedin, href: 'https://www.linkedin.com/in/albinmmathew/' },
+    { Icon: Mail, href: 'mailto:albinmathew@gmail.com' },
   ];
 
   return (
-    <footer className="py-8 bg-gradient-to-b from-[#eef2ff] to-white border-t border-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-        <div className="flex flex-col items-center gap-10">
+    <footer className="py-12 bg-[#1e1b4b] relative overflow-hidden">
+      {/* Background Noise Effect */}
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.05] mix-blend-overlay"></div>
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
+        <div className="flex flex-col items-center gap-8">
 
           <div className="flex flex-col items-center">
-            <div className="text-3xl font-black uppercase tracking-tighter text-indigo-900 mb-1">
-              AM
+            <div className="text-3xl font-black uppercase tracking-tighter text-white mb-1">
+              ALBIN<span className="text-blue-500">.</span>
             </div>
-            <div className="w-8 h-1 bg-blue-500 rounded-full"></div>
+            <div className="w-10 h-[2px] bg-blue-500/50 rounded-full"></div>
           </div>
 
-          <div className="flex gap-6 md:gap-8">
-            {socials.map((social, i) => (
+          <div className="flex gap-4 md:gap-5">
+            {socials.map(({ Icon, href }, i) => (
               <a
                 key={i}
-                href={social.href}
-                className="w-12 h-12 md:w-14 md:h-14 bg-white border border-white rounded-2xl flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white transition-all duration-500 hover:-translate-y-2 shadow-xl shadow-blue-100/50"
+                href={href}
+                className="w-10 h-10 md:w-12 md:h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-500 hover:-translate-y-1 shadow-2xl shadow-black/20"
               >
-                {social.icon}
+                <Icon size={20} />
               </a>
             ))}
           </div>
 
           <div className="space-y-2">
-            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-indigo-900/30">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-white/20">
               &copy; {new Date().getFullYear()} Albin Mammen Mathew. All rights reserved.
             </p>
           </div>
