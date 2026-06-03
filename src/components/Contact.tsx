@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="overflow-hidden">
                     <p className="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] mb-1">Email</p>
-                    <p className="font-bold text-indigo-900 group-hover:text-blue-600 transition-colors uppercase tracking-tight truncate max-w-full">albinmathew@gmail.com</p>
+                    <p className="font-bold text-indigo-900 group-hover:text-blue-600 transition-colors tracking-tight truncate max-w-full">albinmathew@gmail.com</p>
                   </div>
                 </a>
 
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] mb-1">LinkedIn</p>
-                    <p className="font-bold text-indigo-900 group-hover:text-blue-600 transition-colors uppercase tracking-tight">albinmmathew</p>
+                    <p className="font-bold text-indigo-900 group-hover:text-blue-600 transition-colors tracking-tight">albinmmathew</p>
                   </div>
                 </a>
 
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] mb-1">GitHub</p>
-                    <p className="font-bold text-indigo-900 group-hover:text-blue-600 transition-colors uppercase tracking-tight">albinmmathew</p>
+                    <p className="font-bold text-indigo-900 group-hover:text-blue-600 transition-colors tracking-tight">albinmmathew</p>
                   </div>
                 </a>
 
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] mb-1">Location</p>
-                    <p className="font-bold text-indigo-900/60 uppercase tracking-tight">Kerala, India</p>
+                    <p className="font-bold text-indigo-900/60 tracking-tight">Kerala, India</p>
                   </div>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
                   <label className="text-xs font-black text-blue-400 uppercase tracking-[0.3em] ml-2">Name</label>
                   <input
                     type="text"
-                    placeholder="ALBIN MATHEW"
+                    placeholder="Albin Mathew"
                     className="w-full bg-white/50 border-2 border-blue-50 rounded-2xl px-6 py-4 text-indigo-900 font-bold placeholder:text-blue-200 focus:outline-none focus:border-blue-500 transition-all shadow-sm"
                   />
                 </div>
@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
                   <label className="text-xs font-black text-blue-400 uppercase tracking-[0.3em] ml-2">Email</label>
                   <input
                     type="email"
-                    placeholder="EMAIL@DOMAIN.COM"
+                    placeholder="email@domain.com"
                     className="w-full bg-white/50 border-2 border-blue-50 rounded-2xl px-6 py-4 text-indigo-900 font-bold placeholder:text-blue-200 focus:outline-none focus:border-blue-500 transition-all shadow-sm"
                   />
                 </div>
@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
               <div className="space-y-3">
                 <label className="text-xs font-black text-blue-400 uppercase tracking-[0.3em] ml-2">Message</label>
                 <textarea
-                  placeholder="DESCRIBE YOUR PROJECT..."
+                  placeholder="Describe your project..."
                   rows={5}
                   className="w-full bg-white/50 border-2 border-blue-50 rounded-[2rem] px-6 py-5 text-indigo-900 font-bold placeholder:text-blue-200 focus:outline-none focus:border-blue-500 transition-all shadow-sm resize-none"
                 ></textarea>

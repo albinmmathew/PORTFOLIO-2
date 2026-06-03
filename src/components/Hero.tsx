@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowDown, Download, Sparkles, MousePointer2 } from 'lucide-react';
+import { ArrowDown, Download, Sparkles, MousePointer2, Eye } from 'lucide-react';
 import React, { useRef } from 'react';
 
 const Hero: React.FC = () => {
@@ -91,11 +91,12 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto px-6">
               <a
                 href="/Resume.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 bg-blue-600 text-white hover:bg-blue-700 font-black text-xs md:text-base uppercase tracking-widest transition-all rounded-xl md:rounded-2xl shadow-2xl shadow-blue-500/20 flex items-center justify-center gap-3 hover:-translate-y-1 active:scale-95"
               >
-                <Download className="w-5 h-5 md:w-6 md:h-6" strokeWidth={3} />
-                Get Resume
+                <Eye className="w-5 h-5 md:w-6 md:h-6" strokeWidth={3} />
+                View Resume
               </a>
               <a
                 href="#projects"

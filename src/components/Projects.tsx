@@ -16,26 +16,26 @@ const Projects: React.FC = () => {
     {
       title: 'CivicNode',
       category: 'Sustainable Development',
-      description: 'A Django platform aligning with SDG 11. Features issue tracking to empower local civic engagement and sustainable urban development.',
-      tech: ['Django', 'Python', 'SQLite', 'PostgreSQL'],
+      description: 'A Django-based platform aligned with SDG-11 to help citizens raise and track local civic issues, promoting better urban management.',
+      tech: ['Python', 'Django', 'HTML', 'CSS', 'SQLite'],
       github: 'https://github.com/albinmmathew/CivicNode',
       demo: null
     },
     {
-      title: 'CurrencyWebApp',
-      category: 'Machine Learning UI',
-      description: 'Specialized interface for model evaluation. Features drag-and-drop inference and real-time visualization of performance metrics.',
-      tech: ['React', 'Python', 'MLOps', 'Tailwind'],
-      github: 'https://github.com/albinmmathew/CurrencyWebApp',
+      title: 'NativeExchange',
+      category: 'Sustainable Commerce',
+      description: 'A Java-based digital exchange platform aligned with SDG-8 to directly connect micro-scale local producers with consumers.',
+      tech: ['Java', 'Swing (GUI)', 'Oracle Database'],
+      github: 'https://github.com/albinmmathew/NativeExchange',
       demo: null
     },
     {
-      title: 'Kairo Todo',
-      category: 'Frontend Excellence',
-      description: 'A minimalist task management system focusing on immediate interaction feedback and sleek responsive design patterns.',
-      tech: ['TypeScript', 'Vite', 'Framer Motion'],
-      github: 'https://github.com/albinmmathew/TodoPlanner',
-      demo: 'https://albinmmathew.github.io/TodoPlanner/'
+      title: 'CurrencyWebApp',
+      category: 'Machine Learning',
+      description: 'An Indian currency recognition system utilizing transfer learning to accurately classify and recognize various currency notes.',
+      tech: ['Python', 'TensorFlow', 'ResNet', 'MobileNet'],
+      github: 'https://github.com/albinmmathew/CurrencyWebApp',
+      demo: null
     }
   ];
 

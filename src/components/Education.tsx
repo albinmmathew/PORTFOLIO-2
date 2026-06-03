@@ -46,7 +46,7 @@ const Education: React.FC = () => {
                 </div>
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-2 md:gap-4 mb-3">
                   <h4 className="text-xl md:text-2xl font-black text-indigo-900 uppercase tracking-tight leading-tight break-words">Master of Computer Applications</h4>
-                  <span className="px-4 py-1 bg-blue-600 text-white text-[10px] md:text-xs font-black uppercase tracking-widest rounded-full w-fit whitespace-nowrap">2024 — 2026</span>
+                  <span className="px-4 py-1 bg-blue-600 text-white text-[10px] md:text-xs font-black uppercase tracking-widest rounded-full w-fit whitespace-nowrap">2025 — 2027</span>
                 </div>
                 <div className="flex items-center gap-2 text-blue-500 mb-4">
                   <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4" />
@@ -63,7 +63,7 @@ const Education: React.FC = () => {
                 </div>
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-2 md:gap-4 mb-3">
                   <h4 className="text-xl md:text-2xl font-black text-indigo-900 uppercase tracking-tight leading-tight break-words">BSc Mathematics</h4>
-                  <span className="px-4 py-1 bg-blue-100 text-blue-600 text-[10px] md:text-xs font-black uppercase tracking-widest rounded-full w-fit whitespace-nowrap">2021 — 2024</span>
+                  <span className="px-4 py-1 bg-blue-100 text-blue-600 text-[10px] md:text-xs font-black uppercase tracking-widest rounded-full w-fit whitespace-nowrap">2022 — 2025</span>
                 </div>
                 <div className="flex items-center gap-2 text-blue-500 mb-4">
                   <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4" />

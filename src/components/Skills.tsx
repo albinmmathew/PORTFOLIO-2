@@ -13,22 +13,22 @@ const Skills: React.FC = () => {
     {
       name: 'Languages',
       icon: <Terminal strokeWidth={2} size={32} />,
-      skills: ['Java', 'C', 'Python']
+      skills: ['Java', 'Python', 'C', 'SQL']
     },
     {
       name: 'Databases',
       icon: <Layers strokeWidth={2} size={32} />,
-      skills: ['Oracle', 'SQLite']
+      skills: ['Oracle', 'PostgreSQL', 'SQLite']
     },
     {
       name: 'Web Tech',
       icon: <Globe strokeWidth={2} size={32} />,
-      skills: ['HTML5', 'React', 'Django']
+      skills: ['HTML5/CSS3', 'React', 'Django', 'Flask']
     },
     {
       name: 'Tooling',
       icon: <Zap strokeWidth={2} size={32} />,
-      skills: ['Git', 'Jira', 'NetBeans']
+      skills: ['Git', 'GitHub', 'Jira', 'NetBeans']
     }
   ];
 
