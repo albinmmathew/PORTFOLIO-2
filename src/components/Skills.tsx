@@ -52,7 +52,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section className="py-24 md:py-40 bg-gradient-to-b from-white to-[#eef2ff]" id="skills">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff] dark:from-zinc-950 dark:to-zinc-900/50" id="skills">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -65,7 +65,7 @@ const Skills: React.FC = () => {
             <span className="w-12 h-[3px] bg-blue-500 rounded-full"></span>
             <span className="text-blue-500 font-black tracking-widest text-sm uppercase">Technical Arsenal</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-sans font-black leading-tight text-indigo-900 tracking-tighter uppercase break-words">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-sans font-black leading-tight text-indigo-900 dark:text-zinc-100 tracking-tighter uppercase break-words">
             SKILL <span className="text-blue-500">MAPPING</span>
           </h2>
         </motion.div>
@@ -85,19 +85,19 @@ const Skills: React.FC = () => {
                 scale: 1.02,
                 boxShadow: "0 20px 40px -15px rgba(59, 130, 246, 0.2)"
               }}
-              className="bg-white/75 backdrop-blur-xl border border-white p-7 md:p-8 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl shadow-blue-100/50 transition-all duration-500 group h-full cursor-pointer"
+              className="bg-white/75 dark:bg-zinc-900/40 backdrop-blur-xl border border-white dark:border-zinc-800 p-7 md:p-8 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl shadow-blue-100/50 dark:shadow-none transition-all duration-500 group h-full cursor-pointer"
             >
               <div className="flex items-center gap-4 md:gap-6 mb-8 md:mb-10">
-                <div className="text-blue-600 p-4 md:p-5 bg-blue-50 rounded-2xl md:rounded-3xl group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-blue-100/20">
+                <div className="text-blue-600 dark:text-blue-400 p-4 md:p-5 bg-blue-50 dark:bg-zinc-800 rounded-2xl md:rounded-3xl group-hover:bg-blue-600 dark:group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-blue-100/20 dark:shadow-none">
                   {category.icon}
                 </div>
-                <h3 className="text-2xl md:text-3xl font-black text-indigo-900 tracking-tighter uppercase">{category.name}</h3>
+                <h3 className="text-2xl md:text-3xl font-black text-indigo-900 dark:text-zinc-100 tracking-tighter uppercase">{category.name}</h3>
               </div>
               <div className="flex flex-wrap gap-2 md:gap-3">
                 {category.skills.map(skill => (
                   <span
                     key={skill}
-                    className="text-[10px] md:text-xs font-black uppercase tracking-widest px-4 py-2 md:px-6 md:py-3 bg-white border border-blue-50 text-blue-500 rounded-full shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-default"
+                    className="text-[10px] md:text-xs font-black uppercase tracking-widest px-4 py-2 md:px-6 md:py-3 bg-white dark:bg-zinc-900 border border-blue-50 dark:border-zinc-800 text-blue-500 dark:text-blue-400 rounded-full shadow-sm hover:shadow-md hover:border-blue-200 dark:hover:border-zinc-700 transition-all cursor-default"
                   >
                     {skill}
                   </span>

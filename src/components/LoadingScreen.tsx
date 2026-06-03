@@ -51,7 +51,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinished }) => {
             y: -100,
             transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
           }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#eef2ff] overflow-hidden"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#eef2ff] dark:bg-zinc-950 overflow-hidden"
         >
           {/* Background Effects matching the theme */}
           <div className="absolute inset-0 pointer-events-none">
@@ -67,7 +67,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinished }) => {
                 initial={{ y: 100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="text-indigo-950 font-black text-6xl md:text-8xl tracking-tighter"
+                className="text-indigo-950 dark:text-zinc-50 font-black text-6xl md:text-8xl tracking-tighter"
               >
                 AMM<span className="text-blue-500 text-glow">.</span>
               </motion.h1>
@@ -90,7 +90,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinished }) => {
                   key={statusIndex}
                   initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-indigo-900/40 text-[10px] font-black uppercase tracking-[0.4em]"
+                  className="text-indigo-900/40 dark:text-zinc-500 text-[10px] font-black uppercase tracking-[0.4em]"
                 >
                   {statuses[statusIndex]}
                 </motion.span>

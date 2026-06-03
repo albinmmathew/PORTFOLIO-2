@@ -58,10 +58,10 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-3 px-6 py-2 bg-white border border-white rounded-full mb-8 shadow-xl shadow-blue-100/50"
+            className="inline-flex items-center gap-3 px-6 py-2 bg-white dark:bg-zinc-900 border border-white dark:border-zinc-800 rounded-full mb-8 shadow-xl shadow-blue-100/50 dark:shadow-none"
           >
-            <Sparkles className="text-blue-500 animate-pulse" size={16} />
-            <span className="text-blue-600 text-[10px] md:text-xs font-black uppercase tracking-[0.4em]">
+            <Sparkles className="text-blue-500 dark:text-blue-400 animate-pulse" size={16} />
+            <span className="text-blue-600 dark:text-blue-400 text-[10px] md:text-xs font-black uppercase tracking-[0.4em]">
               Available for Innovation
             </span>
           </motion.div>
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-indigo-950 font-sans text-[10vw] sm:text-[9vw] md:text-[7vw] lg:text-[6.5rem] font-black leading-[0.9] tracking-tighter mb-6 md:mb-8 break-words"
+            className="text-indigo-950 dark:text-zinc-50 font-sans text-[10vw] sm:text-[9vw] md:text-[7vw] lg:text-[6.5rem] font-black leading-[0.9] tracking-tighter mb-6 md:mb-8 break-words"
           >
             ALBIN <br />
             <span className="text-blue-500 text-glow">MAMMEN</span> <br />
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col items-center"
           >
-            <p className="text-indigo-900/60 text-base md:text-xl max-w-2xl leading-relaxed font-bold uppercase tracking-tight mb-6 px-4">
+            <p className="text-indigo-900/60 dark:text-zinc-400 text-base md:text-xl max-w-2xl leading-relaxed font-bold uppercase tracking-tight mb-6 px-4">
               MCA Student // Mathematics Graduate <br />
               <span className="text-blue-400 font-medium lowercase italic opacity-90 block mt-1">architecting logic into digital symphonies.</span>
             </p>
@@ -93,14 +93,14 @@ const Hero: React.FC = () => {
                 href="/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 bg-blue-600 text-white hover:bg-blue-700 font-black text-xs md:text-base uppercase tracking-widest transition-all rounded-xl md:rounded-2xl shadow-2xl shadow-blue-500/20 flex items-center justify-center gap-3 hover:-translate-y-1 active:scale-95"
+                className="group w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 bg-blue-600 text-white hover:bg-blue-700 font-black text-xs md:text-base uppercase tracking-widest transition-all rounded-xl md:rounded-2xl shadow-2xl shadow-blue-500/20 flex items-center justify-center gap-3 hover:-translate-y-1 active:scale-95 cursor-pointer"
               >
                 <Eye className="w-5 h-5 md:w-6 md:h-6" strokeWidth={3} />
                 View Resume
               </a>
               <a
                 href="#projects"
-                className="group w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 bg-white text-indigo-950 border-2 border-white hover:shadow-xl transition-all rounded-xl md:rounded-2xl font-black text-xs md:text-base uppercase tracking-widest flex items-center justify-center gap-3 shadow-lg hover:-translate-y-1"
+                className="group w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 bg-white dark:bg-zinc-900 text-indigo-950 dark:text-zinc-50 border-2 border-white dark:border-zinc-800 hover:shadow-xl transition-all rounded-xl md:rounded-2xl font-black text-xs md:text-base uppercase tracking-widest flex items-center justify-center gap-3 shadow-lg hover:-translate-y-1 cursor-pointer"
               >
                 View Works
                 <MousePointer2 className="w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform" />
