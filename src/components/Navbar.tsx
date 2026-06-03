@@ -10,6 +10,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,15 +52,28 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               <motion.a
                 key={link.name}
                 href={link.href}
+                onMouseEnter={() => {
+                  if (link.name !== 'Contact') setHoveredLink(link.name);
+                }}
+                onMouseLeave={() => {
+                  if (link.name !== 'Contact') setHoveredLink(null);
+                }}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`px-4 py-2 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] transition-all rounded-full border border-transparent ${link.name === 'Contact'
+                className={`relative px-4 py-2 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] transition-all rounded-full border border-transparent z-10 ${link.name === 'Contact'
                     ? 'bg-blue-600 text-white hover:bg-white hover:text-blue-600 hover:border-blue-600 dark:hover:bg-zinc-950 dark:hover:text-blue-400 dark:hover:border-blue-400 shadow-lg shadow-blue-100 dark:shadow-none'
-                    : 'text-indigo-950/80 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/50 dark:hover:bg-zinc-800/50'
+                    : 'text-indigo-950/80 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
               >
                 {link.name}
+                {hoveredLink === link.name && link.name !== 'Contact' && (
+                  <motion.div
+                    layoutId="navHover"
+                    className="absolute inset-0 bg-blue-50/70 dark:bg-zinc-800/60 rounded-full -z-10"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
               </motion.a>
             ))}
 

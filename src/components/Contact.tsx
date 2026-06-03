@@ -1,10 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, MapPin, Send, MessageSquare } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, Github, Linkedin, MapPin, Send, MessageSquare, CheckCircle2 } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'submitted'>('idle');
+
+  useEffect(() => {
+    if (status === 'submitted') {
+      const timer = setTimeout(() => {
+        setStatus('idle');
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formState.name || !formState.email || !formState.message) return;
+    setStatus('submitting');
+    setTimeout(() => {
+      setStatus('submitted');
+      setFormState({ name: '', email: '', message: '' });
+    }, 1500);
+  };
+
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff] dark:from-zinc-950 dark:to-zinc-900/50" id="contact">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#eef2ff] dark:from-zinc-950 dark:to-zinc-900/50 relative" id="contact">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -90,12 +112,15 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             className="lg:col-span-7 bg-white/75 dark:bg-zinc-900/40 backdrop-blur-xl border border-white dark:border-zinc-800 p-8 md:p-14 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl shadow-blue-100/50 dark:shadow-none"
           >
-            <form className="space-y-6 md:space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div className="space-y-3">
                   <label className="text-xs font-black text-blue-400 uppercase tracking-[0.3em] ml-2">Name</label>
                   <input
                     type="text"
+                    required
+                    value={formState.name}
+                    onChange={(e) => setFormState(prev => ({ ...prev, name: e.target.value }))}
                     placeholder="Albin Mathew"
                     className="w-full bg-white/50 dark:bg-zinc-900/30 border-2 border-blue-50 dark:border-zinc-800 rounded-2xl px-6 py-4 text-indigo-900 dark:text-zinc-100 font-bold placeholder:text-blue-200 dark:placeholder:text-zinc-700 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 transition-all shadow-sm"
                   />
@@ -104,6 +129,9 @@ const Contact: React.FC = () => {
                   <label className="text-xs font-black text-blue-400 uppercase tracking-[0.3em] ml-2">Email</label>
                   <input
                     type="email"
+                    required
+                    value={formState.email}
+                    onChange={(e) => setFormState(prev => ({ ...prev, email: e.target.value }))}
                     placeholder="email@domain.com"
                     className="w-full bg-white/50 dark:bg-zinc-900/30 border-2 border-blue-50 dark:border-zinc-800 rounded-2xl px-6 py-4 text-indigo-900 dark:text-zinc-100 font-bold placeholder:text-blue-200 dark:placeholder:text-zinc-700 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 transition-all shadow-sm"
                   />
@@ -112,6 +140,9 @@ const Contact: React.FC = () => {
               <div className="space-y-3">
                 <label className="text-xs font-black text-blue-400 uppercase tracking-[0.3em] ml-2">Message</label>
                 <textarea
+                  required
+                  value={formState.message}
+                  onChange={(e) => setFormState(prev => ({ ...prev, message: e.target.value }))}
                   placeholder="Describe your project..."
                   rows={5}
                   className="w-full bg-white/50 dark:bg-zinc-900/30 border-2 border-blue-50 dark:border-zinc-800 rounded-[2rem] px-6 py-5 text-indigo-900 dark:text-zinc-100 font-bold placeholder:text-blue-200 dark:placeholder:text-zinc-700 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 transition-all shadow-sm resize-none"
@@ -119,16 +150,31 @@ const Contact: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="w-full md:w-auto px-10 py-5 bg-blue-600 text-white font-black uppercase tracking-widest rounded-full hover:bg-blue-700 transition-all shadow-2xl shadow-blue-200 dark:shadow-none flex items-center justify-center gap-4 active:scale-95 group cursor-pointer"
+                disabled={status !== 'idle'}
+                className={`w-full md:w-auto px-10 py-5 bg-blue-600 text-white font-black uppercase tracking-widest rounded-full hover:bg-blue-700 transition-all shadow-2xl shadow-blue-200 dark:shadow-none flex items-center justify-center gap-4 active:scale-95 group cursor-pointer ${status !== 'idle' ? 'opacity-75 cursor-not-allowed' : ''}`}
               >
-                Send Signal
-                <Send size={20} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                {status === 'submitting' ? 'Transmitting...' : 'Send Signal'}
+                <Send size={20} className={`transition-transform duration-500 ${status === 'submitting' ? 'translate-x-12 -translate-y-12 opacity-0' : 'group-hover:translate-x-1 group-hover:-translate-y-1'}`} />
               </button>
             </form>
           </motion.div>
 
         </div>
       </div>
+
+      <AnimatePresence>
+        {status === 'submitted' && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            className="fixed bottom-6 right-6 z-[110] bg-emerald-500 dark:bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-xl flex items-center gap-3 font-sans font-bold border border-emerald-400 dark:border-emerald-500"
+          >
+            <CheckCircle2 size={24} />
+            <span>Message Transmitted! 🚀</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

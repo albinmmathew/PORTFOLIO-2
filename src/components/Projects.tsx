@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Box, ArrowUpRight } from 'lucide-react';
+import { Github, ExternalLink, Box, ArrowUpRight, Globe, Handshake, Coins } from 'lucide-react';
 
 interface Project {
   title: string;
@@ -9,6 +9,7 @@ interface Project {
   github: string;
   demo: string | null;
   category: string;
+  icon: React.ReactNode;
 }
 
 const Projects: React.FC = () => {
@@ -19,7 +20,8 @@ const Projects: React.FC = () => {
       description: 'A Django-based platform aligned with SDG-11 to help citizens raise and track local civic issues, promoting better urban management.',
       tech: ['Python', 'Django', 'HTML', 'CSS', 'SQLite'],
       github: 'https://github.com/albinmmathew/CivicNode',
-      demo: null
+      demo: null,
+      icon: <Globe size={28} strokeWidth={2.5} />
     },
     {
       title: 'NativeExchange',
@@ -27,7 +29,8 @@ const Projects: React.FC = () => {
       description: 'A Java-based digital exchange platform aligned with SDG-8 to directly connect micro-scale local producers with consumers.',
       tech: ['Java', 'Swing (GUI)', 'Oracle Database'],
       github: 'https://github.com/albinmmathew/NativeExchange',
-      demo: null
+      demo: null,
+      icon: <Handshake size={28} strokeWidth={2.5} />
     },
     {
       title: 'CurrencyWebApp',
@@ -35,7 +38,8 @@ const Projects: React.FC = () => {
       description: 'An Indian currency recognition system utilizing transfer learning to accurately classify and recognize various currency notes.',
       tech: ['Python', 'TensorFlow', 'ResNet', 'MobileNet'],
       github: 'https://github.com/albinmmathew/CurrencyWebApp',
-      demo: null
+      demo: null,
+      icon: <Coins size={28} strokeWidth={2.5} />
     }
   ];
 
@@ -87,7 +91,7 @@ const Projects: React.FC = () => {
               >
                 <div className="flex justify-between items-start mb-6 md:mb-10">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-600 text-white rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center shadow-2xl shadow-blue-200 dark:shadow-none group-hover:rotate-[15deg] transition-transform duration-500">
-                    <Box size={28} strokeWidth={2.5} />
+                    {project.icon}
                   </div>
                   <div className="flex gap-2">
                     <div className="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 text-blue-600 dark:text-blue-400 rounded-xl md:rounded-2xl hover:bg-blue-600 dark:hover:bg-blue-600 hover:text-white dark:hover:text-white transition-all shadow-sm">
