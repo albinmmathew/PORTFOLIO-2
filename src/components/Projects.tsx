@@ -81,7 +81,7 @@ const Projects: React.FC = () => {
             >
               <div className="absolute inset-0 bg-blue-400/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
 
-              <div 
+              <div
                 onClick={() => window.open(project.github, '_blank')}
                 className="bg-white/75 backdrop-blur-3xl border border-white p-7 md:p-8 lg:p-10 rounded-[3rem] md:rounded-[4rem] shadow-2xl shadow-blue-100/30 hover:shadow-blue-200/50 transition-all duration-700 flex flex-col w-full hover:-translate-y-4 hover:scale-[1.02] light-sweep cursor-pointer"
               >

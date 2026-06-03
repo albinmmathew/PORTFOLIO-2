@@ -44,8 +44,8 @@ const Skills: React.FC = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
@@ -70,7 +70,7 @@ const Skills: React.FC = () => {
           </h2>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -81,7 +81,7 @@ const Skills: React.FC = () => {
             <motion.div
               key={category.name}
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.02,
                 boxShadow: "0 20px 40px -15px rgba(59, 130, 246, 0.2)"
               }}

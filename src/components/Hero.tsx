@@ -26,10 +26,10 @@ const Hero: React.FC = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section 
-      ref={ref} 
+    <section
+      ref={ref}
       onMouseMove={handleMouseMove}
-      className="relative overflow-hidden min-h-[100svh] flex items-center justify-center pt-32 md:pt-40 pb-20 mesh-bg" 
+      className="relative overflow-hidden min-h-[100svh] flex items-center justify-center pt-32 md:pt-40 pb-20 mesh-bg"
       id="home"
     >
       {/* Dynamic Background Elements */}
@@ -65,8 +65,8 @@ const Hero: React.FC = () => {
               Available for Innovation
             </span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
             <span className="text-blue-500 text-glow">MAMMEN</span> <br />
             MATHEW
           </motion.h1>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,18 +87,18 @@ const Hero: React.FC = () => {
               MCA Student // Mathematics Graduate <br />
               <span className="text-blue-400 font-medium lowercase italic opacity-90 block mt-1">architecting logic into digital symphonies.</span>
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto px-6">
-              <a 
-                href="/Resume.pdf" 
+              <a
+                href="/Resume.pdf"
                 download
                 className="group w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 bg-blue-600 text-white hover:bg-blue-700 font-black text-xs md:text-base uppercase tracking-widest transition-all rounded-xl md:rounded-2xl shadow-2xl shadow-blue-500/20 flex items-center justify-center gap-3 hover:-translate-y-1 active:scale-95"
               >
                 <Download className="w-5 h-5 md:w-6 md:h-6" strokeWidth={3} />
                 Get Resume
               </a>
-              <a 
-                href="#projects" 
+              <a
+                href="#projects"
                 className="group w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 bg-white text-indigo-950 border-2 border-white hover:shadow-xl transition-all rounded-xl md:rounded-2xl font-black text-xs md:text-base uppercase tracking-widest flex items-center justify-center gap-3 shadow-lg hover:-translate-y-1"
               >
                 View Works

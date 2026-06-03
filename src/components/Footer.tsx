@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
     <footer className="py-12 bg-[#1e1b4b] relative overflow-hidden">
       {/* Background Noise Effect */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.05] mix-blend-overlay"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
         <div className="flex flex-col items-center gap-8">
 

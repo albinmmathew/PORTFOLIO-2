@@ -53,9 +53,9 @@ const FAQ: React.FC = () => {
                 <span className="text-indigo-950 font-black text-sm md:text-lg uppercase tracking-tight">
                   {faq.q}
                 </span>
-                <ChevronDown 
-                  className={`text-blue-500 transition-transform duration-500 ${activeIndex === i ? 'rotate-180' : ''}`} 
-                  size={24} 
+                <ChevronDown
+                  className={`text-blue-500 transition-transform duration-500 ${activeIndex === i ? 'rotate-180' : ''}`}
+                  size={24}
                 />
               </button>
               <AnimatePresence>

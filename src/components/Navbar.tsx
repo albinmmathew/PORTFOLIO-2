@@ -49,11 +49,10 @@ const Navbar: React.FC = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`px-4 py-2 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] transition-all rounded-full border border-transparent ${
-                  link.name === 'Contact' 
-                    ? 'bg-blue-600 text-white hover:bg-white hover:text-blue-600 hover:border-blue-600 shadow-lg shadow-blue-100' 
+                className={`px-4 py-2 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] transition-all rounded-full border border-transparent ${link.name === 'Contact'
+                    ? 'bg-blue-600 text-white hover:bg-white hover:text-blue-600 hover:border-blue-600 shadow-lg shadow-blue-100'
                     : 'text-indigo-950/60 hover:text-blue-600 hover:bg-blue-50/50'
-                }`}
+                  }`}
               >
                 {link.name}
               </motion.a>

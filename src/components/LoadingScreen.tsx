@@ -26,13 +26,13 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinished }) => {
           setTimeout(() => {
             setLoading(false);
             if (onFinished) onFinished();
-          }, 1000);
+          }, 600);
           return 100;
         }
-        const next = prev + Math.random() * 12;
+        const next = prev + Math.random() * 18;
         return next > 100 ? 100 : next;
       });
-    }, 200);
+    }, 120);
 
     return () => clearInterval(timer);
   }, [onFinished]);
@@ -46,7 +46,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinished }) => {
       {loading && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ 
+          exit={{
             opacity: 0,
             y: -100,
             transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
@@ -86,7 +86,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinished }) => {
             {/* Loading Text */}
             <div className="mt-4 flex flex-col items-center gap-1">
               <div className="flex items-center gap-2">
-                <motion.span 
+                <motion.span
                   key={statusIndex}
                   initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinished }) => {
 
           {/* Decorative Elements */}
           <motion.div
-            animate={{ 
+            animate={{
               rotate: 360,
               scale: [1, 1.1, 1]
             }}
@@ -111,7 +111,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinished }) => {
             className="absolute -bottom-20 -right-20 w-80 h-80 border-2 border-blue-500/5 rounded-full"
           />
           <motion.div
-            animate={{ 
+            animate={{
               rotate: -360,
               scale: [1, 1.2, 1]
             }}
