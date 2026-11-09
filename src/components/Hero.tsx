@@ -36,12 +36,12 @@ const Hero: React.FC = () => {
       <motion.div
         animate={{ x: mousePos.x, y: mousePos.y }}
         style={{ y: y1, rotate }}
-        className="absolute top-[5%] left-[10%] w-64 h-64 bg-blue-300/20 blur-[80px] rounded-full mix-blend-multiply transition-transform duration-300 ease-out"
+        className="absolute top-[5%] left-[10%] w-64 h-64 bg-blue-300/20 blur-[80px] rounded-full mix-blend-multiply pointer-events-none"
       />
       <motion.div
         animate={{ x: -mousePos.x, y: -mousePos.y }}
         style={{ y: y2, rotate: -rotate }}
-        className="absolute bottom-[10%] right-[15%] w-96 h-96 bg-indigo-300/20 blur-[100px] rounded-full mix-blend-multiply transition-transform duration-300 ease-out"
+        className="absolute bottom-[10%] right-[15%] w-96 h-96 bg-indigo-300/20 blur-[100px] rounded-full mix-blend-multiply pointer-events-none"
       />
       <motion.div
         animate={{
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-indigo-950 dark:text-zinc-50 font-sans text-[10vw] sm:text-[9vw] md:text-[7vw] lg:text-[6.5rem] font-black leading-[0.9] tracking-tighter mb-6 md:mb-8 break-words"
+            className="text-indigo-950 dark:text-zinc-50 font-sans text-[clamp(2.75rem,7vw,6.5rem)] font-black leading-[0.9] tracking-tighter mb-6 md:mb-8 break-words"
           >
             ALBIN <br />
             <span className="text-blue-500 text-glow">MAMMEN</span> <br />

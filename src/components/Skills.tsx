@@ -11,14 +11,14 @@ interface SkillCategory {
 const Skills: React.FC = () => {
   const skillCategories: SkillCategory[] = [
     {
-      name: 'Languages',
+      name: 'Languages & Mobile',
       icon: <Terminal strokeWidth={2} size={32} />,
-      skills: ['Java', 'Python', 'C', 'SQL']
+      skills: ['Java', 'Python', 'C', 'C# .NET', 'SQL', 'Android (Java)']
     },
     {
-      name: 'Databases',
+      name: 'Databases & Cloud',
       icon: <Layers strokeWidth={2} size={32} />,
-      skills: ['Oracle', 'PostgreSQL', 'SQLite']
+      skills: ['PostgreSQL', 'Oracle', 'SQLite', 'Supabase']
     },
     {
       name: 'Web Tech',
@@ -97,7 +97,7 @@ const Skills: React.FC = () => {
                 {category.skills.map(skill => (
                   <span
                     key={skill}
-                    className="text-[10px] md:text-xs font-black uppercase tracking-widest px-4 py-2 md:px-6 md:py-3 bg-white dark:bg-zinc-900 border border-blue-50 dark:border-zinc-800 text-blue-500 dark:text-blue-400 rounded-full shadow-sm hover:shadow-md hover:border-blue-200 dark:hover:border-zinc-700 transition-all cursor-default"
+                    className="text-[10px] md:text-xs font-black uppercase tracking-widest px-4 py-2 md:px-6 md:py-3 bg-white dark:bg-zinc-900 border border-blue-50 dark:border-zinc-800 text-blue-500 dark:text-blue-400 rounded-full shadow-sm hover:shadow-md hover:border-blue-200 dark:border-zinc-700 transition-all cursor-default"
                   >
                     {skill}
                   </span>

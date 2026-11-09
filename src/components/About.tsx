@@ -37,7 +37,7 @@ const About: React.FC = () => {
               <img
                 src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000"
                 alt="Tech Setup"
-                className="w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full aspect-[4/3] md:aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
           </motion.div>
@@ -60,16 +60,11 @@ const About: React.FC = () => {
                 My academic journey is rooted in the logical elegance of mathematics. After graduating from <span className="text-blue-600 font-black">St. Berchmans College</span>, I've dedicated myself to bridging the gap between abstract analytical reasoning and high-performance computing.
               </p>
 
-              <div className="p-6 md:p-7 bg-blue-50/50 dark:bg-zinc-800/30 rounded-2xl md:rounded-3xl border border-blue-100 dark:border-zinc-800/50 flex gap-4 md:gap-6 items-center">
-                <div className="text-4xl md:text-5xl font-black text-blue-200 dark:text-zinc-700">01</div>
+              <div className="p-6 md:p-7 bg-blue-50/50 dark:bg-zinc-800/30 rounded-2xl md:rounded-3xl border border-blue-100 dark:border-zinc-800/50">
                 <p className="text-sm md:text-base font-bold text-indigo-900 dark:text-zinc-200 leading-snug uppercase tracking-tight">
                   Currently pursuing MCA at <span className="text-blue-600 underline underline-offset-4 decoration-2 decoration-blue-200">Rajagiri College</span>, focusing on translating complex logic into scalable digital systems.
                 </p>
               </div>
-
-              <p className="font-medium italic text-sm md:text-lg">
-                "I believe that code is the modern architecture of thought, where every function is a theorem and every system is a symphony of logic."
-              </p>
             </motion.div>
           </div>
 

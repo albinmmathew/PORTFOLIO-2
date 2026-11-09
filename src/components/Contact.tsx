@@ -62,13 +62,13 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="space-y-6">
-                <a href="mailto:albinmathew@gmail.com" className="flex items-center gap-4 md:gap-6 group">
+                <a href="mailto:albinmmathew@gmail.com" className="flex items-center gap-4 md:gap-6 group">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-50 dark:bg-zinc-800 text-blue-600 dark:text-blue-400 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 flex-shrink-0">
                     <Mail size={20} />
                   </div>
                   <div className="overflow-hidden">
                     <p className="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] mb-1">Email</p>
-                    <p className="font-bold text-indigo-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors tracking-tight truncate max-w-full">albinmathew@gmail.com</p>
+                    <p className="font-bold text-indigo-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors tracking-tight truncate max-w-full">albinmmathew@gmail.com</p>
                   </div>
                 </a>
 
